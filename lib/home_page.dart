@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:penyimpanan_lokal/pages/note_list_page.dart';
 import 'package:penyimpanan_lokal/pages/shared_pref_page.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -31,7 +32,14 @@ class MyHomePage extends StatelessWidget {
               height: 16,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const NoteListPage(),
+                  ),
+                );
+              },
               child: const Text('Database Lokal (SQLite)'),
             ),
           ],
